@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Computer Identity Test</title>
+</head>
+<body>
+    <h1>
+        Computer Identity Test
+    </h1>
+    <p>
+        This is a test page for the Computer IdentityActiveX control for IE and Computer Identity Plugin for Mozilla Firefox (and possibly other
+        browsers).
+    </p>
+    <h2>
+        Computer Identity Validation</h2>
+    <p>
+        Your login to this web site requires computer identity validation. If you are prompted to install the Computer Identity ActiveX control
+        or Plugin from Teztech, Inc., please allow the installation to proceed.
+    </p>
+    <p>
+        For questions about the Computer Identity system, please contact your office administrator.
+    </p>
+    <div id="Error" class="errorSummary" style="display: none;color:Red;">
+    </div>
+    <form id="aspnetForm" name="aspnetForm" action="test.html">
+        <p>
+            <b>Browser:</b><span id="Browser"></span></p>
+        <p>
+            <b>Status:</b><span id="Status">idle</span></p>
+        <p>
+            <b>Computer Identity:</b><span id="Identity"></span></p>
+
+        <script type="text/javascript" src="ComputerIdentityPlugin/GetComputerIdentity.js"></script>
+        
+        <script>
+            function UpdateComputerIdentity(computerIdentity)
+            {
+                document.getElementById("Identity").innerHTML = computerIdentity;
+            }
+            
+            GetComputerIdentity(UpdateComputerIdentity, 'flagrealty.teztech.com', 'Error', 'Status', 'Browser');
+        </script>
+
+        <p>
+            This is the next to last paragraph</p>
+        <script>
+        </script>
+
+        <p>
+            This is the last paragraph</p>
+    </form>
+</body>
+</html>

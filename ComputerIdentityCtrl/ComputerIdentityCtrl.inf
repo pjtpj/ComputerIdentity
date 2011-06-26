@@ -1,0 +1,12 @@
+[version] 
+; version signature (same for both NT and Win95) do not remove
+signature="$CHICAGO$"
+AdvancedINF=2.0  
+[Add.Code]
+ComputerIdentityCtrl.dll=ComputerIdentityCtrl.dll
+[ComputerIdentityCtrl.dll]
+file-win32-x86=thiscab
+clsid={4B631C42-F4D9-42B8-9E4E-5FEA45DF488D}
+FileVersion=1,0,0,3
+RegisterServer=yes  
+; end of INF file

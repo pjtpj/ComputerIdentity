@@ -1,0 +1,41 @@
+// ComputerIdentityCtrl.idl : IDL source for ComputerIdentityCtrl
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ComputerIdentityCtrl.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(417EB9AB-562B-426F-BD66-A0226BDDD3CC),
+	dual,
+	oleautomation,
+	nonextensible,
+	helpstring("IComputerIdentity Interface"),
+	pointer_default(unique)
+]
+interface IComputerIdentity : IDispatch{
+	[propget, id(1), helpstring("String to identify the computer")] HRESULT Identity([out, retval] BSTR* pVal);
+};
+
+[
+	uuid(3D5749A4-9CFA-45E1-BF9C-45DB4A8AE764),
+	version(1.0),
+	helpstring("ComputerIdentityCtrl 1.0 Type Library")
+]
+library ComputerIdentityCtrlLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4B631C42-F4D9-42B8-9E4E-5FEA45DF488D),
+		control,
+		helpstring("ComputerIdentity Class")
+	]
+	coclass ComputerIdentity
+	{
+		[default] interface IComputerIdentity;
+	};
+};

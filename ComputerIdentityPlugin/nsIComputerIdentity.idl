@@ -1,0 +1,7 @@
+#include "nsISupports.idl"
+
+[scriptable, uuid(417EB9AB-562B-426F-BD66-A0226BDDD3CC)]
+interface nsIComputerIdentity : nsISupports 
+{
+	readonly attribute string Identity;
+};

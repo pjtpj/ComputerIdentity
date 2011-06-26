@@ -1,0 +1,36 @@
+HKCR
+{
+	ComputerIdentityCtrl.ComputerIdentity.1 = s 'ComputerIdentity Class'
+	{
+		CLSID = s '{4B631C42-F4D9-42B8-9E4E-5FEA45DF488D}'
+		'Insertable'
+	}
+	ComputerIdentityCtrl.ComputerIdentity = s 'ComputerIdentity Class'
+	{
+		CLSID = s '{4B631C42-F4D9-42B8-9E4E-5FEA45DF488D}'
+		CurVer = s 'ComputerIdentityCtrl.ComputerIdentity.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4B631C42-F4D9-42B8-9E4E-5FEA45DF488D} = s 'ComputerIdentity Class'
+		{
+			ProgID = s 'ComputerIdentityCtrl.ComputerIdentity.1'
+			VersionIndependentProgID = s 'ComputerIdentityCtrl.ComputerIdentity'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			'TypeLib' = s '{3D5749A4-9CFA-45E1-BF9C-45DB4A8AE764}'
+			'Version' = s '1.0'
+		}
+	}
+}
