@@ -1,11 +1,14 @@
-We have a ListingsTech client that wants to make sure that his agents cannot give out their 
-ListingsTech agent logins to anybody else. I made some suggestions of social ways to deal 
-with the problem, but he's really worried and he's going to pay me to develop some code to 
-prevent it. Well, the customer is always right, eh? 
+ComputerIdentity
+================
+
+We have a client that wants to make sure that his agents cannot give out their logins to anybody 
+else. I made some suggestions of social ways to deal with the problem, but he's really worried 
+and he's going to pay me to develop some code to prevent it. Well, the customer is always 
+right, eh? 
 
 So, my initial though is to do a MAC address logging and checking similar to that done by the 
 license monitoring code in Search Engine Commando. Basically, if the user's MAC address in the 
-ListingsTech database is empty, then we allow the login, read the MAC address (see below), then 
+database is empty, then we allow the login, read the MAC address (see below), then 
 store it in ListingsTech database. If the user's MAC address is already in the ListingsTech 
 database, and the MACs match, then access is allowed. If the MACs don't match, the account will 
 be locked out (customer's desired outcome). I envision three fields added to the User account 
